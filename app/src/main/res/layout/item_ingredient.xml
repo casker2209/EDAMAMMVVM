@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.intern.edamammvvm.module.recipeitem.viewmodel.IngredientViewModel" />
+    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dim105">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/ingredientConstraint"
+        android:layout_alignParentLeft="true">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/ingredientImage"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:imageUrl="@{viewModel.ingredient.imageUrl}"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="@dimen/dim35"
+        android:layout_height="match_parent"
+        android:id="@+id/ingredientQuantity"
+        android:text="@{viewModel.ingredient.quantity}"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/ingredientConstraint"
+        android:layout_toLeftOf="@id/ingredientQuantity"
+        android:gravity="center"
+        android:text="@{viewModel.ingredient.text}"
+        android:id="@+id/ingredientName"/>
+</RelativeLayout>
+</layout>

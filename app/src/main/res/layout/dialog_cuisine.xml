@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.intern.edamammvvm.module.recipeitem.dialog.viewmodel.SearchDialogViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:layout_marginLeft="@dimen/dim7"
+            android:gravity="center_vertical"
+            android:text="Cuisine type"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/american)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+            android:padding="@dimen/dim7"
+            android:text="@string/american"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/asian)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+
+            android:text="@string/asian"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/asian)}"
+
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+
+            android:text="@string/british"/>
+
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+                android:padding="@dimen/dim7"
+                android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/chinese)}"
+
+                android:text="@string/chinese" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+            android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/eastern_europe)}"
+
+            android:text="@string/eastern_europe"/>
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+                android:padding="@dimen/dim7"
+                android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/french)}"
+
+                android:text="@string/french" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+            android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/indian)}"
+
+            android:text="@string/indian"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+            android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/japanese)}"
+
+            android:text="@string/japanese"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+            android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/kosher)}"
+
+            android:text="@string/kosher"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/nordic)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+            android:text="@string/nordic"/>
+        </LinearLayout>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/middle_eastern)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+            android:text="@string/middle_eastern"/>
+
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/south_american)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+            android:text="@string/south_american"/>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.cuisineQuery,@string/south_east_asian)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.cuisineQuery,b)}"
+            android:text="@string/south_east_asian"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:layout_marginLeft="@dimen/dim7"
+            android:gravity="center_vertical"
+            android:text="Dish type"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.dishType,@string/biscuits_and_cookies)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dishType,b)}"
+            android:text="@string/biscuits_and_cookies"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.dishType,@string/bread)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dishType,b)}"
+            android:text="@string/bread"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.dishType,@string/cereals)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dishType,b)}"
+            android:text="@string/cereals"/>
+        </LinearLayout>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.dishType,@string/main_course)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dishType,b)}"
+            android:text="@string/main_course"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.dishType,@string/side_dish)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dishType,b)}"
+            android:text="@string/side_dish" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.dishType,@string/starter)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dishType,b)}"
+            android:text="@string/starter"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.dishType,@string/soup)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dishType,b)}"
+            android:text="@string/soup"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:checked="@{viewModel.contain(viewModel.dishType,@string/asian)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dishType,b)}"
+            android:padding="@dimen/dim7"
+            android:text="Sandwiches"/>
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:checked="@{viewModel.contain(viewModel.dishType,@string/pancakes)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dishType,b)}"
+            android:padding="@dimen/dim7"
+            android:text="@string/pancakes"/>
+        </LinearLayout>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@{viewModel.contain(viewModel.dishType,@string/sweets)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dishType,b)}"
+            android:padding="@dimen/dim7"
+            android:text="@string/sweets"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:layout_marginLeft="@dimen/dim7"
+            android:gravity="center_vertical"
+
+            android:text="Meal type"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.mealType,b)}"
+            android:checked="@{viewModel.contain(viewModel.mealType,`Breakfast`)}"
+            android:text="Breakfast"/>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.mealType,b)}"
+            android:checked="@{viewModel.contain(viewModel.mealType,`Dinner`)}"
+            android:text="Dinner"/>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.mealType,b)}"
+            android:checked="@{viewModel.contain(viewModel.mealType,`Lunch`)}"
+            android:text="Lunch"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.mealType,b)}"
+            android:checked="@{viewModel.contain(viewModel.mealType,`Snack`)}"
+            android:text="Snack"/>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.mealType,b)}"
+            android:checked="@{viewModel.contain(viewModel.mealType,`Teatime`)}"
+            android:text="Teatime"/>
+    </LinearLayout>
+    </ScrollView>
+</layout>

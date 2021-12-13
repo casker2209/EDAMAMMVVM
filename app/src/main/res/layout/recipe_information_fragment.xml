@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.intern.edamammvvm.module.recipeitem.viewmodel.RecipeViewModel" />
+    </data>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".module.recipeitem.view.RecipeInformation">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim42"
+        android:paddingVertical="@dimen/dim7"
+        android:paddingHorizontal="@dimen/dim14"
+        android:gravity="right"
+        android:background="@color/grayLight"
+        android:drawableLeft="@drawable/icon_timer"
+        android:text="@{``+viewModel.recipeItem.totalTime}"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim42"
+        android:gravity="center_vertical"
+        android:paddingVertical="@dimen/dim7"
+        android:paddingHorizontal="@dimen/dim14"
+        android:background="@color/blue"
+        android:text="Diet"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dietRecycler"
+        recyclerListString="@{viewModel.recipeItem.dietLabels}"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim42"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/dim7"
+            android:paddingHorizontal="@dimen/dim14"
+            android:background="@color/blue"
+            android:text="Health"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim42"
+           android:paddingVertical="@dimen/dim7"
+            android:paddingHorizontal="@dimen/dim14"
+            android:gravity="end"
+            android:drawableStart="@drawable/icon_weight"
+            android:background="@color/grayLight"
+            android:text="@{``+viewModel.recipeItem.calories+` cal`}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim42"
+            android:paddingVertical="@dimen/dim7"
+            android:paddingHorizontal="@dimen/dim14"
+            android:background="@color/grayLight"
+            android:gravity="end"
+            android:drawableLeft="@drawable/icon_weight"
+            android:text="@{``+viewModel.recipeItem.totalWeight}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim42"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/dim7"
+            android:paddingHorizontal="@dimen/dim14"
+            android:background="@color/gray"
+            android:text="Health information"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/healthRecycler"
+            recyclerListString="@{viewModel.recipeItem.healthLabels}"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim42"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/dim7"
+            android:paddingHorizontal="@dimen/dim14"
+            android:background="@color/blue"
+            android:text="Cuisine"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim42"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/dim7"
+            android:paddingHorizontal="@dimen/dim14"
+            android:background="@color/gray"
+            android:text="Cuisine Type"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cuisineRecycler"
+            recyclerListString="@{viewModel.recipeItem.cuisineType}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim42"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/dim7"
+            android:paddingHorizontal="@dimen/dim14"
+            android:text="Dish Type"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:id="@+id/dishRecycler"
+            recyclerListString="@{viewModel.recipeItem.dishType}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim42"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/dim7"
+            android:paddingHorizontal="@dimen/dim14"
+            android:text="Meal Type"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:id="@+id/mealRecycler"
+            recyclerListString="@{viewModel.recipeItem.mealType}"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>
+</layout>

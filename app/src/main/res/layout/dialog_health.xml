@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.intern.edamammvvm.module.recipeitem.dialog.viewmodel.SearchDialogViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:layout_marginLeft="@dimen/dim7"
+        android:gravity="center_vertical"
+        android:text="Diet"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dietQuery,b)}"
+        android:checked="@{viewModel.contain(viewModel.dietQuery,`balanced`)}"
+        android:text="balanced"/>
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dietQuery,b)}"
+        android:checked="@{viewModel.contain(viewModel.dietQuery,`high-fiber`)}"
+        android:text="high-fiber"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dietQuery,b)}"
+        android:checked="@{viewModel.contain(viewModel.dietQuery,`high-protein`)}"
+        android:text="high-protein"/>
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dietQuery,b)}"
+        android:checked="@{viewModel.contain(viewModel.dietQuery,`low-carb`)}"
+        android:text="low-carb"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:checked="@{viewModel.contain(viewModel.dietQuery,`low-fat`)}"
+        android:text="low-fat"/>
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.dietQuery,b)}"
+        android:checked="@{viewModel.contain(viewModel.dietQuery,`low-sodium`)}"
+        android:text="low-sodium"/>
+        </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:layout_marginLeft="@dimen/dim7"
+        android:gravity="center_vertical"
+        android:text="Health information"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+        android:checked="@{viewModel.contain(viewModel.healthQuery,`alcohol-cocktail`)}"
+        android:text="alcohol-cocktail"/>
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_weight="1"        android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+        android:checked="@{viewModel.contain(viewModel.healthQuery,`alcohol-free`)}"
+        android:text="alcohol-free"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+        android:checked="@{viewModel.contain(viewModel.healthQuery,`celery-free`)}"
+        android:text="celery-free"/>
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_weight="1"        android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+        android:checked="@{viewModel.contain(viewModel.healthQuery,`DASH`)}"
+        android:text="DASH"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+        android:checked="@{viewModel.contain(viewModel.healthQuery,`@string/egg_free`)}"
+        android:text="@string/egg_free"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"        android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/fish_free)}"
+        android:text="@string/fish_free"/>
+        </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/fodmap_free)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+            android:text="@string/fodmap_free"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/_kosher)}"
+            android:text="@string/_kosher"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/low_fat_abs)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+            android:text="@string/low_fat_abs"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/low_potassium)}"
+            android:text="@string/low_potassium"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+        android:padding="@dimen/dim7"
+        android:checked="@{viewModel.contain(viewModel.healthQuery,@string/low_sugar)}"
+        android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+        android:text="@string/low_sugar"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/lupine_free)}"
+            android:text="@string/lupine_free"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/mediterranean)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+            android:text="@string/mediterranean"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/mollusk_free)}"
+            android:text="@string/mollusk_free"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/no_oil_added)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+            android:text="@string/no_oil_added"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/paleo)}"
+            android:text="@string/paleo"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/peanut_free)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+            android:text="@string/peanut_free"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/pescatarian)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+            android:text="@string/pescatarian"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/pork_free)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+            android:text="@string/pork_free"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/red_meat_free)}"
+
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+            android:text="@string/red_meat_free"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/sugar_conscious)}"
+
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+            android:text="@string/sugar_conscious"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/sulfite_free)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+            android:text="@string/sulfite_free"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/tree_nut_free)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+            android:text="@string/tree_nut_free"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/vegan)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+            android:text="@string/vegan"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/vegetarian)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+
+            android:text="@string/vegetarian"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"            android:layout_height="wrap_content"
+            android:padding="@dimen/dim7"
+            android:checked="@{viewModel.contain(viewModel.healthQuery,@string/wheat_free)}"
+            android:onCheckedChanged="@{(v,b) -> viewModel.onCheck(v.getText,viewModel.healthQuery,b)}"
+            android:text="@string/wheat_free"/>
+        </LinearLayout>
+
+</LinearLayout></ScrollView>
+</layout>

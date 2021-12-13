@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D92027</color>
+    <color name="colorPrimaryDark">#B1040A</color>
+    <color name="transfer">#59D92027</color>
+    <color name="transfer_gray">#E6575656</color>
+    <color name="grayLight">#F8F9FE</color>
+    <color name="grayLight2">#ECEDF2</color>
+    <color name="grayDark">#8C8C8C</color>
+    <color name="grayWhite">#ECEDF2</color>
+    <color name="gray">#EFEEEE</color>
+    <color name="progress">#DADADA</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#3484EF</color>
+    <color name="blackLight">#575656</color>
+    <color name="icon">#95A5A6</color>
+    <color name="gold">#DEBC06</color>
+    <color name="silver">#E7E6DF</color>
+    <color name="bronze">#B87333</color>
+    <color name="kpi_gray">#F6F6F9</color>
+    <color name="red">#D92027</color>
+    <color name="green">#1EDB0E</color>
+</resources>
