@@ -2,7 +2,6 @@ package com.intern.edamammvvm.module.search.repository;
 
 import com.intern.edamammvvm.module.search.model.RecipeItem;
 import com.intern.edamammvvm.module.search.model.SearchQuery;
-import com.intern.edamammvvm.network.RecipeItemResponse;
 
 import java.util.List;
 
